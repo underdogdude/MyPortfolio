@@ -4,14 +4,44 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
+.title { 
+    font-family: 'Archivo Black', sans-serif;
+}
 .section__header { 
     min-height: 100vh;
 
 }
 .navbar{ 
     min-height: 10vh;
+}
+
+.navbar-brand .text{ 
+    font-size: 3rem;
+    text-shadow: 10px 0px 0px #f84303;
+    color: #f8cc10;
+    letter-spacing: 12px;
+    transition: all .9s ease;
+}
+
+.navbar-brand .text .dot {
+    font-size: 3rem;
+    text-shadow: 10px 0px 0px #f8cc10;
+    color: #f84303;
+    letter-spacing: 12px;
+    transition: all .9s ease;
+}
+  
+.navbar-brand .text:hover .dot {
+    text-shadow: 10px 0px 0px #f84303;
+    color: #f8cc10;
+}
+
+.navbar-brand .text:hover{ 
+    text-shadow: 10px 0px 0px #f8cc10;
+    color: #f84303;
 }
 
 .header__menu { 
@@ -30,6 +60,8 @@ body {
 }
 
 .intro__nav .intro__item { 
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
     width: 30vh;
     height: 30vh;
     border: none;

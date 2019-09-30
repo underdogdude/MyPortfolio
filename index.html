@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bright Thai Dim-Sum Boy</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/vendors/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <section class="section__header">
+        <!-- Nav -->
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+                <!-- Insert IMG here -->
+                Bootstrap
+            </a>
+        </nav>
+
+
+        <div class="header__menu">
+            <div class="menu__wrap">
+                <nav class="navbar intro__nav">
+                    <a class="intro__item btn" href="www.google.com" id="left">
+                        Profile
+                    </a>
+                    <a class="intro__item btn" href="www.google.com" id="top">
+                        Work
+                    </a>
+                    <a class="intro__item btn" href="www.google.com" id="right">
+                        Contact
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__myself">
+            <div class="myself__wrap">
+                <img src="img/avatar.png" class="myself__img vicible" id="avartar__left" />
+                <img src="img/avatar-top.png" class="myself__img invicible" id="avartar__top" />
+                <img src="img/avatar-right.png" class="myself__img invicible" id="avartar__right" /> 
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+<!-- Script -->
+<script src="./js/vendors/jquery.min.js"></script>
+<script src="./js/vendors/bootstrap.min.js"></script>
+
+<script>
+    $( ".intro__nav .intro__item" ).hover(function() {
+
+        var activeBtn = this.id;
+        switch(activeBtn) {
+            case "left":
+
+                triggerImg("avartar__left");
+                break;
+            case "top":
+
+                triggerImg("avartar__top");
+                break;
+            case "right":
+
+                triggerImg("avartar__right");
+                break;
+            default:
+                break;
+        }
+    });
+
+    function triggerImg (imgID) { 
+        
+        var getImg = $(".myself__img");
+            getImg.each(element => {
+              
+                if( getImg[element].id === imgID ) { 
+                    $(getImg[element]).addClass('vicible');
+                    $(getImg[element]).removeClass('invicible');
+                }else{
+                    $(getImg[element]).addClass('invicible');
+                    $(getImg[element]).removeClass('vicible');
+                }
+            });
+    }
+</script>
+
+</html>
